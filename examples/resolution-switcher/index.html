@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>switcher</title>
+    <link href="../../lib/video-js.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../lib/videojs-resolution-switcher.css">
+</head>
+
+<body>
+    <video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="../video/example.jpg" data-setup="{}">
+      <source src="../video/example.m4v" type="video/mp4">
+    </video>
+    <script src="../../lib/videojs.min.js"></script>
+    <script src="../../lib/videojs-resolution-switcher.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      var player=videojs('my-video', {
+            controls: true,
+            plugins: {
+                videoJsResolutionSwitcher: {
+                    default: 360,
+                    dynamicLabel: true,
+                    ui:true,
+                }
+            }
+        }, function() {
+            var player = this;
+            window.player = player;
+            /*此处放置视屏数据，格式为数组，下面有被注释的示例*/
+            player.updateSrc(
+                [{
+                        src: '../video/example.m4v',
+                        type: 'video/mp4',
+                        label: '标清',
+                        res: 360
+                    }, {
+                        src: '../video/example.m4v',
+                        type: 'video/mp4',
+                        label: '高清',
+                        res: 720
+                    },
+                    {
+                        src: '../video/example.m4v',
+                        type: 'video/mp4',
+                        label: '超清',
+                        res: 1080
+                    }
+                ]
+            );
+            player.on('resolutionchange', function() {
+                console.info('Source changed to %s', player.src())
+            })
+        })
+    </script>
+</body>
+
+</html>

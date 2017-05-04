@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>static</title>
+    <link href="../../lib/video-js.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="../video/example.jpg" data-setup="{}">
+    </video>
+    <script src="../../lib/videojs.min.js"></script>
+    <script src="../../lib/videojs-contrib-hls.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    var player=videojs('my-video', {
+      controls: true,
+    });
+    player.src({
+        src: 'http://live121.cnlive.com:1935/live/meilizhongguo/playlist.m3u8',
+        type: 'application/x-mpegURL',
+      })
+    </script>
+</body>
+
+</html>

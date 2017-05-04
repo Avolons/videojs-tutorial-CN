@@ -1,0 +1,7 @@
+/**
+ * videojs-watermark
+ * @version 1.0.1
+ * @copyright 2016 Brooks Lyrette <brooks@dotsub.com>
+ * @license Apache-2.0
+ */
+.video-js.vjs-watermark{display:block}.video-js .vjs-watermark-content{opacity:0.99;position:absolute;padding:5px;-webkit-transition:visibility 1s,opacity 1s;-moz-transition:visibility 1s,opacity 1s;-ms-transition:visibility 1s,opacity 1s;-o-transition:visibility 1s,opacity 1s;transition:visibility 1s,opacity 1s}.video-js .vjs-watermark-top-right{right:0;top:0}.video-js .vjs-watermark-top-left{left:0;top:0}.video-js .vjs-watermark-bottom-right{right:0;bottom:30px}.video-js .vjs-watermark-bottom-left{left:0;bottom:30px}.video-js.vjs-user-inactive.vjs-playing .vjs-watermark-fade{opacity:0}
