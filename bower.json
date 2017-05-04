@@ -1,0 +1,20 @@
+{
+  "name": "vjs",
+  "description": "vjs guilder",
+  "main": "index.js",
+  "authors": [
+    "wzh"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "video.js": "^6.0.0"
+  }
+}

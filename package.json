@@ -1,0 +1,22 @@
+{
+  "name": "vjs",
+  "version": "1.0.0",
+  "description": "vjs guilder",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wzh",
+  "license": "ISC",
+  "devDependencies": {
+    "videojs-contrib-ads": "^4.2.6",
+    "videojs-hotkeys": "^0.2.17",
+    "videojs-playlist": "^3.1.0"
+  },
+  "dependencies": {
+    "videojs-watermark": "^1.0.1"
+  }
+}
