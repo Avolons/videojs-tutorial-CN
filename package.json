@@ -12,9 +12,12 @@
   "author": "wzh",
   "license": "ISC",
   "devDependencies": {
+    "video.js": "^5.19.2",
     "videojs-contrib-ads": "^4.2.6",
+    "videojs-contrib-hls": "^5.5.1",
     "videojs-hotkeys": "^0.2.17",
-    "videojs-playlist": "^3.1.0"
+    "videojs-playlist": "^3.1.0",
+    "videojs-resolution-switcher": "^0.4.2"
   },
   "dependencies": {
     "videojs-watermark": "^1.0.1"

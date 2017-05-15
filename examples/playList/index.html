@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>playlist</title>
-    <link href="../../lib/video-js.min.css" rel="stylesheet">
+    <link href="../../node_modules/video.js/dist/video-js.min.css" rel="stylesheet">
   </head>
   <body>
-    <video id="my-video" class="video-js" controls width="640" height="264" >
+    <video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="../../video/example.jpg" data-setup="{}">
+      <source src="../../video/example.m4v" type="video/mp4">
     </video>
-    <script src="../../lib/videojs.min.js"></script>
+    <script src="../../node_modules/video.js//dist/video.min.js"></script>
     <script src="../../node_modules/videojs-playlist/dist/videojs-playlist.min.js" charset="utf-8"></script>
     <script type="text/javascript">
         var player = videojs("my-video");

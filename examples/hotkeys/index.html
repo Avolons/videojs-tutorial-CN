@@ -4,15 +4,15 @@
 <head>
   <meta charset="utf-8">
     <title>hotkeys</title>
-    <link href="../../lib/video-js.min.css" rel="stylesheet">
+    <link href="../../node_modules/video.js/dist/video-js.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <video id="my-video" class="video-js video-js-big" controls preload="auto" width="640" height="264" poster="../video/example.jpg" data-setup="{}">
-      <source src="../video/example.m4v" type="video/mp4">
+    <video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster='http://media.w3.org/2010/05/sintel/poster.png' data-setup="{}">
+      <source src='http://media.w3.org/2010/05/sintel/trailer.mp4' type="video/mp4">
     </video>
-    <script src="../../lib/videojs.min.js"></script>
-    <script src="../../lib/videojs.hotkeys.min.js"></script>
+    <script src="../../node_modules/video.js//dist/video.min.js"></script>
+    <script src="../../node_modules/videojs-hotkeys/videojs.hotkeys.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" charset="utf-8"></script>
     <script type="text/javascript">
         var player=videojs('my-video').ready(function() {

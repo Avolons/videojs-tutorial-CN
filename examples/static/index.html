@@ -4,15 +4,15 @@
 <head>
     <meta charset="utf-8">
     <title>static</title>
-    <link href="../../lib/video-js.min.css" rel="stylesheet">
-    <script src="../../lib/videojs-ie8.min.js" charset="utf-8"></script>
+    <link href="../../node_modules/video.js/dist/video-js.min.css" rel="stylesheet">
+    <script src="../../node_modules/videojs-ie8/dist/videojs-ie8.min.js" charset="utf-8"></script>
 </head>
 
 <body>
-    <video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="../video/example.jpg" data-setup="{}">
-      <source src="../video/example.m4v" type="video/mp4">
+    <video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="../../video/example.jpg" data-setup="{}">
+      <source src="../../video/example.m4v" type="video/mp4">
     </video>
-    <script src="../../lib/video.min.js"></script>
+    <script src="../../node_modules/video.js//dist/video.min.js"></script>
     <script type="text/javascript">
         var player = videojs("my-video");
     </script>

@@ -4,33 +4,37 @@
 <head>
     <meta charset="utf-8">
     <title>static</title>
-    <link href="../../lib/video-js.min.css" rel="stylesheet">
+     <link href="../../node_modules/video.js/dist/video-js.min.css" rel="stylesheet">
     <link rel="../../node_modules/videojs-contrib-ads/dist/videojs.ads.css" href="/css/master.css">
 </head>
 
 <body>
-    <video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="../video/example.jpg" data-setup="{}">
-      <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+    <video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="../../video/example.jpg" data-setup="{}">
+      <source src="../../video/example.m4v" type="video/mp4">
     </video>
-    <script src="../../lib/videojs.min.js"></script>
+    <script src="../../node_modules/video.js//dist/video.min.js"></script>
     <script src="../../node_modules/videojs-contrib-ads/dist/videojs.ads.min.js" charset="utf-8"></script>
     <script type="text/javascript">
         var player = videojs("my-video");
         player.ready(function(){
+          //初始化广告插件
           player.ads();
-          player.ads.contentSrc="../video/example.m4v";
+          //设置广告插件的广告源
+          player.ads.contentSrc="http://vjs.zencdn.net/v/oceans.mp4";
           player.on('contentupdate', function(){
-    // fetch ad inventory asynchronously, then ...
+              // 广告内容预加载完成后手动触发广告已经加载完成事件
             player.trigger('adsready');
           });
 
+          // 广告初次开始播放时触发
           player.on('readyforpreroll', function() {
             player.ads.startLinearAdMode();
-            // play your linear ad content
-            player.src('../video/example.m4v');
+            // 播放线性广告内容
+            player.src('http://vjs.zencdn.net/v/oceans.mp4');
 
-            // when all your linear ads have finished… do not confuse this with `ended`
+            // 广告播放结束触发adended事件，结束广告，正文开始播放
             player.one('adended', function() {
+              console.log(1);
               player.ads.endLinearAdMode();
             });
           });
